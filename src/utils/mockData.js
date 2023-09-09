@@ -1,18 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Cards = (props) => {
-  const { restaurant } = props;
-  const { name, type_of_food, rating } = restaurant;
-  return (
-    <div className="res-container">
-      <h2>{name}</h2>
-      <span>{type_of_food}</span>
-      <span>{rating}</span>
-    </div>
-  );
-};
-
 const resObj = [
   {
     URL: "http://www.just-eat.co.uk/restaurants-cn-chinese-cardiff/menu",
@@ -181,17 +166,4 @@ const resObj = [
   },
 ];
 
-const AppTemplate = () => {
-  return (
-    <div className="main-container">
-      <h1>All Restaurants</h1>
-      {resObj.map((res) => (
-        <Cards key={res._id.$oid} restaurant={res} />
-      ))}
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppTemplate />);
+export default resObj;

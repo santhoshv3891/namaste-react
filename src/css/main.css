@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  min-height: 100px;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo-holder img {
+  width: 100px;
+  height: 100px;
+}
+
+.menu-container {
+  width: 400px;
+}
+
+.menu-container ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu-container ul li {
+  margin: 30px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.res-container {
+  height: auto;
+  background: #ccc;
+  border: 1px solid;
+  border-radius: 2px;
+  margin: 20px;
+  padding: 10px;
+  flex: 0 0 12%;
+}
+
+.filter-container {
+  padding: 20px;
+  display: flex;
+}
+
+.filter-btn {
+  border: 1px solid #ccc;
+  font-weight: bold;
+  background-color: #ddd;
+  width: auto;
+  padding: 10px;
+  cursor: pointer;
+}
