@@ -1,11 +1,14 @@
+import { RES_IMG } from "../utils/common";
+
 const Card = (props) => {
   const { restaurant } = props;
-  const { name, type_of_food, rating } = restaurant;
+  const { name, cuisines, avgRating, cloudinaryImageId } = restaurant.info;
   return (
     <div className="res-container">
+      <img src={RES_IMG + cloudinaryImageId} />
       <h3>{name}</h3>
-      <div>Cuisines: {type_of_food}</div>
-      <div>Rating: {rating}</div>
+      <div>Cuisines: {cuisines.join(", ")}</div>
+      <div>Rating: {avgRating}</div>
     </div>
   );
 };
