@@ -90,3 +90,16 @@ body {
 .search-container {
   padding: 20px;
 }
+
+.menu-links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-links a:hover {
+  text-decoration: underline;
+}
+
+.menu-links a:visited {
+  color: #000;
+}
