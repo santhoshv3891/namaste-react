@@ -6,11 +6,11 @@ const Header = () => {
   const [btnText, setBtnText] = useState("Login");
 
   return (
-    <div className="header-container">
+    <div className="header-container flex justify-between">
       <div className="logo-holder">
-        <img src={LOGO_IMG} />
+        <img className="w-40" src={LOGO_IMG} />
       </div>
-      <div className="menu-container">
+      <div className="menu-container flex w">
         <ul>
           <li className="menu-links">
             <Link to="/">Home</Link>
