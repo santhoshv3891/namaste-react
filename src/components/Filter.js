@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import Card from "./Card";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Filter = () => {
   const [resList, setResObj] = useState([]);
   const [filteredListAll, setFilteredObj] = useState([]);
   const [srchText, getSrchText] = useState([]);
+
+  const onlineStatus = useOnlineStatus();
 
   useEffect(() => {
     fetchData();
@@ -26,6 +29,8 @@ const Filter = () => {
     );
   };
 
+  if (onlineStatus === false)
+    return <h1>You're offline! Please check your internet connection!</h1>;
   return resList.length === 0 ? (
     <Shimmer />
   ) : (
