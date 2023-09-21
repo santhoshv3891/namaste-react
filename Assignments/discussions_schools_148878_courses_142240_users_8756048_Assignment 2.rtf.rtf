@@ -1,0 +1,112 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang9 Assignment 2 - Igniting Our App\par
+Kiran Bawane\par
+1.What is \lquote npm\rquote  ?\par
+\b0 - npm (Node Package Manager) is a tool for managing and installing JavaScript packages and dependencies used in Node.js applications. It simplifies package management, version control, and script automation for JavaScript projects.\par
+\b 2. What is \lquote Parcel/Webpack\rquote ? Why do we need it ?\par
+- \b0 Parcel and Webpack are both popular JavaScript module bundlers that help developers manage and optimize their web applications\par
+\b need of Parcel/Webpack:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1 Code Bundling: \b0 Both Parcel and Webpack bundle multiple files into a single optimized package, reducing load times.\par
+{\pntext\f1\'B7\tab}\b Code Optimization: \b0 They optimize code size by removing unnecessary elements, leading to faster loading web pages.\par
+{\pntext\f1\'B7\tab}\b Module System: \b0 Support for JavaScript modules helps organize and manage code.\par
+{\pntext\f1\'B7\tab}\b Dependency Management: \b0 They handle third-party library dependencies, preventing conflicts and ensuring proper inclusion.\par
+{\pntext\f1\'B7\tab}\b Development Workflow: \b0 Tools and plugins simplify tasks like code transpilation, CSS processing, and image optimization.\par
+{\pntext\f1\'B7\tab}\b Code Splitting: \b0 Allows for loading only necessary code, improving initial load times.\par
+{\pntext\f1\'B7\tab}\b Hot Module Replacement (HMR): \b0 Supports real-time code updates during development without browser refresh.\par
+
+\pard\sa200\sl276\slmult1\b 3. What is \lquote .parcel-cache\rquote  ?\par
+\b0 - parcel-cache is a file where parcel does caching while building the project for production or for dev. It caches the files and details and checks if any file is changed. If it finds some changes in a file then it reloads the page but the build time is very less compared to the first time because of the cache. It is generated automatically\b\par
+ 4. What is npx?\par
+\b0 - Npx is a command line tools which is used for executing packages which are installed in the system. It's often used to execute binaries from packages without the need to install them globally or clutter your project's dependencies.\par
+\b 5.What is difference between \lquote dependencies\rquote  and \lquote devDependencies\rquote ?\par
+- dependencies\b0  include packages required for your application to function in production, while \b devDependencies\b0  are packages used during development and testing, not necessary for the final production deployment.\b\par
+6.What is Tree Shaking?\par
+- \b0 Tree shaking is a JavaScript optimization technique that removes unused or dead  code from your application's bundle during the build process, resulting in smaller and more efficient bundles.Parcel, as a build tool, automatically performs tree shaking as part of its optimization process.\b\par
+7.What is Hot Module Replacement?\par
+\b0 - Hot Module Replacement (HMR) is a development tool that enables real-time updates of code changes without requiring a full page refresh, making the development process faster and more efficient.It replace only the module that have changed, preserving the application state.\b\par
+8.List down fourite 5 superpowers or Parcel and describe any 3?\par
+1.Blazing Fast Build\b0 :Parcel's build speed is exceptional, thanks to parallel processing and optimized caching.\b\par
+2.zero Configuration:\b0 Parcel offers a "zero-configuration" setup, automatically detecting and configuring projects, saving developers from extensive setup\b\par
+3. Hot Module Replacement:\b0 Parcel supports Hot Module Replacement (HMR), enabling real-time code updates without manual browser refresh\b\par
+4.Automatic Dependency Resolution\b0 :Automatic dependency resolution simplifies the management of third-party libraries and their inclusion in the project.\b\par
+5.Support for Multiple File Types:\b0 It supports various file types out of the box, including HTML, CSS, SCSS, LESS, and images, reducing the need for additional setup.\par
+\b Describing three of these superpowers:\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-180\li180\sa200\sl276\slmult1\b Blazing Fast Builds: \b0 Parcel's speed is a game-changer for development. It optimizes the build process by caching and reusing intermediate artifacts, making subsequent builds incredibly fast. This rapid feedback loop encourages a more efficient development workflow.\par
+{\pntext\f1\'B7\tab}\b Zero Configuration: \b0 The "zero-configuration" feature simplifies project setup. Developers can start coding right away without worrying about extensive configuration files. Parcel's ability to detect and configure project settings based on the file structure reduces the initial setup time and complexity.\par
+{\pntext\f1\'B7\tab}\b Support for Multiple File Types: \b0 Parcel's ability to handle various file types out of the box simplifies the development process. Whether you're working with JavaScript, CSS, HTML, or images, Parcel can bundle them without the need for additional configuration or plugins. This versatility streamlines project setup and management.\b\par
+
+\pard\sa200\sl276\slmult1\par
+9. What is .gitignore? What should we add and not add into it ?\par
+- \b0 .gitignore is a Git configuration file used to exclude specific files and directories from version control. It's valuable for excluding generated files, sensitive data, and irrelevant items from your repository's history.\par
+- .gitignore is the file where we add the files and folder which are not supposed to be pushed into the git repo. The files which be generated again from other files (such as node_modules, dist, .parcel-cache, etc.) are not required to be pushed into the git repo. The files which are not automatically generated are not supposed to be added in .gitignore.\par
+otherwise the file which was not generate again from other files(Source code, documentation , important scripts) they are not added in .gitignore file.\par
+\b 10. What is difference between \lquote package.json\rquote  and \lquote package-lock.json\rquote  ?\par
+-package.json \b0 is a metadata file that includes project details like project's name, version, dependencies, scripts, and other configuration settings and dependency listings with version ranges, editable by developers.\par
+\b package-lock.json\b0 , generated by npm, records the exact versions of dependencies, ensuring consistent and reproducible installations. It's automatically managed and not meant for manual editing.\par
+\b\par
+11.  What is \lquote node_modules\rquote  ? Is it good idea to push that to git ?\par
+\b0 -node_modules is a directory in Node.js projects that stores external libraries and modules. It's not advisable to push it to Git because of its size and redundancy with package files.\par
+-It is not a good idea to push node_modules in git because it is automatically generated and its code may also change based on the dependency version.\par
+Git because it makes the repository larger and contains redundant information already found in 'package.json' and 'package-lock.json'.\par
+\b 12. What is \lquote dist\rquote  folder ?\par
+-\b0 The "dist" folder, short for "distribution," is a directory in software projects that contains the optimized and production-ready version of the code. It typically includes minified and bundled code, making it suitable for deployment and distribution while improving performance.\b\par
+13.  What is \lquote browserslists\rquote  ?\par
+-\b0 browserslist is a configuration that specifies the browsers and versions your web project should support. It's used by various development tools to apply browser-specific optimizations and ensure cross-browser compatibility.\b\par
+14. What is vite, webpack, parcel ?\par
+Vite:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b0 Purpose: Designed for fast modern web development.\par
+{\pntext\f1\'B7\tab}Development Server: Provides a fast development server with native ES modules (ESM) for rapid hot module replacement (HMR).\par
+{\pntext\f1\'B7\tab}Build Process: Uses ESM during development and generates optimized bundles for production.\par
+{\pntext\f1\'B7\tab}Configuration: Supports both zero-config and manual configuration.\par
+
+\pard\sa200\sl276\slmult1\b Webpack:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b0 Purpose: Highly configurable build tool suitable for complex projects.\par
+{\pntext\f1\'B7\tab}Development Server: Offers a development server and HMR support but requires more setup compared to Vite.\par
+{\pntext\f1\'B7\tab}Build Process: Provides extensive control over code splitting, asset optimization, and more.\par
+{\pntext\f1\'B7\tab}Configuration: Relies on a detailed configuration file (webpack.config.js) for fine-tuning.\par
+
+\pard\sa200\sl276\slmult1\b Parcel:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b0 Purpose: "Zero-config" build tool for simple project setups.\par
+{\pntext\f1\'B7\tab}Development Server: Includes a development server with built-in HMR for real-time changes.\par
+{\pntext\f1\'B7\tab}Build Process: Automatically detects and configures project settings, optimizing and bundling assets.\par
+{\pntext\f1\'B7\tab}Configuration: Aims to minimize configuration, making it suitable for smaller projects and rapid development.\par
+{\pntext\f1\'B7\tab}These tools cater to different project needs and developer preferences, with Vite focusing on speed and efficiency, Webpack offering flexibility and customization, and Parcel prioritizing simplicity and ease of use.\par
+
+\pard\sa200\sl276\slmult1\b\par
+15. Read About: ^ caret and ~ tilda?\par
+-Caret (^):\par
+\b0 The caret (^) allows compatible updates but restricts breaking changes.\par
+\b Example: \b0 "dependencies": \{ "package-name": "^1.2.3" \} permits versions from 1.2.3 up to, but not including, 2.0.0.\par
+\b -Tilde (~):\par
+\b0 The tilde (~) allows updates to patch versions but restricts minor and major changes.\par
+\b Example: \b0 "dependencies": \{ "package-name": "~1.2.3" \} allows versions from 1.2.3 up to, but not including, 1.3.0.\par
+\b\par
+\par
+\par
+16. Read About Script types in HTML ?\par
+Inline Scripts\b0 : These are JavaScript code blocks placed directly within the HTML document, enclosed in <script> tags. They can be in the <head> or <body> sections.\par
+\b ex. \b0 <script>\par
+  function showMessage() \{\par
+    alert('Hello, World!');\par
+  \}\par
+</script>\b\par
+External Scripts: \b0 These are JavaScript files linked to the HTML document using the <script> tag's src attribute. They can be placed in the <head> or before the closing </body> tag.\par
+ex.\par
+<script src="script.js"></script>\par
+-In HTML, the type attribute in the <script> tag specifies the content type of the script being included. Here are the commonly used type values:\par
+\b  text/javascript: \b0 Specifies that the content is JavaScript code. This type is widely supported and used by default if the type attribute is omitted.\par
+\b module: \b0 Indicates that the script is a JavaScript module, allowing for modular code organization with features like import and export.\par
+\b  application/json: \b0 Defines JSON data. Not commonly used for scripts but rather for embedding JSON data within the HTML document.\par
+\b  text/html: \b0 Rarely used for scripts; typically used to embed HTML code as a script.\par
+\b text/css: \b0 Specifies that the content is CSS code. Rarely used in modern development due to the separation of CSS in separate files.\par
+\b  text/plain: \b0 Specifies plain text, not treated as executable code.\par
+
+\pard\sa200\sl276\slmult1\par
+}
+ 

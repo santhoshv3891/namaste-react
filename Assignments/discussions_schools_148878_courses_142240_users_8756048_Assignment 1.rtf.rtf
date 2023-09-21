@@ -1,0 +1,87 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\ul\b\f0\fs22\lang9 Assignment 1\ulnone\par
+Kiran Bawane.\par
+1.what is Emmet?\par
+\b0 Emmet is a popular web development tool for improving HTML and CSS workflow. Emmet is a shorthand syntax that allows web developers to write HTML and CSS code more quickly and efficiently. It's often used in code editors and integrated development environments (IDEs) to generate code snippets and templates with minimal typing.Emmet is also  a time-saving tool for web developers.\par
+if you simple type ul>li*3\par
+it give automatically generate output code:\par
+<ul>\par
+    <li></li>\par
+    <li></li>\par
+  <li></li>\par
+</ul>\b\par
+2. Difference between Library and Framework?\par
+Library : \b0 A library is a collection of pre-written code modules or functions that can be used to perform specific tasks\b .\par
+\b0 You call a library when you need it\b .\par
+ex: Reactjs, Jquery\par
+Framework : \b0 A framework is a more comprehensive, pre-established structure that dictates the overall flow and architecture of an application.\par
+The framework calls your code\par
+\b ex : Angular , Django\par
+3. What is CDN? Why do we use it? \par
+\b0 A CDN stand for Content Delivery Network.it is network of distributed servers strategically placed worldwide to deliver web content more quickly and reliably to users. It improves website and application performance by reducing latency and providing scalability and security.\par
+\b Use of CDN:\par
+Caching: \b0 CDNs store copies of web content to serve it quickly to users, reducing the need for data to travel long distances and minimizing latency.\par
+\b Geographical Distribution: \b0 CDNs have servers in multiple locations worldwide, delivering content from servers physically closer to users, which speeds up content delivery.\par
+\b Load Balancing: \b0 CDNs evenly distribute incoming requests across their server network to prevent server overload, ensuring consistent performance even during traffic spikes.\par
+\b Security: \b0 Many CDNs offer security features like DDoS protection and Web Application Firewalls (WAFs) to safeguard websites and apps from malicious traffic and attacks.\par
+\b Scalability: \b0 CDNs are built to scale easily, accommodating increased traffic and content demands, making them suitable for growing websites and applications.\par
+\b 4. Why is React known as react?\par
+\b0 React gets its name because it "reacts" to changes in a web application. It's like a quick thinker that can update the user interface when things change, making web applications responsive and interactive. So, the name "React" reflects its ability to react swiftly to data updates and provide a dynamic user experience.\par
+\b 5. What is cross origin in the script tag? \par
+\b0 The crossorigin attribute in the <script> tag is used to specify how the browser should handle requests for external scripts from different domains.\par
+\b crossorigin="anonymous": \b0 This is the default setting. It indicates that the script can be loaded from a different domain without sending user credentials (like cookies) along with the request. This is suitable for public resources.\par
+\b crossorigin="use-credentials": \b0 This setting tells the browser to include user credentials (such as cookies) when loading the script from a different domain. It's used when the script requires access to user-specific data on that domain.\par
+\b 6. What is the difference between React and ReactDOM?\par
+\b0 React and ReactDOM are two separate libraries that are used together in the development of web applications in React.\f1 React is a javascript library used to build User Interfaces, whereas ReactDOM is also a javascript library which enables React to interact with the DOM\f0\lang1033 .\par
+\b React:\b0\par
+\b Purpose: \b0 React, often referred to as React.js or React Core, is the core library for building user interfaces. It provides the foundation and functionality for defining and managing components, handling component state, and rendering the virtual DOM.\par
+\b Usage: \b0 React is used to create and manage the component hierarchy of a web or mobile application, define how the UI should look, and specify how it should respond to changes in data and user interactions.\par
+\b ReactDOM:\b0\par
+\b Purpose: \b0 ReactDOM, short for React DOM, is a specific implementation of React that is focused on rendering React components to the DOM (Document Object Model). It deals with the interaction between React and the browser's DOM.\par
+\b Usage: \b0 ReactDOM is used when you want to render React components into a web page. You import ReactDOM and use its methods like ReactDOM.render() to mount a React component into a specified HTML element, effectively making it part of the web page.\par
+\f1\bullet  Example:\par
+const header = React.createElement(\par
+\ldblquote div\rdblquote , \par
+\{id: \ldblquote parent\rdblquote\},\par
+React.createElement(\par
+\ldblquote h1\rdblquote ,\par
+\{ \},\par
+\ldblquote Welcome to React!\rdblquote\par
+ )\par
+);\par
+ ReactDOM.render(header, document.getElementById(\ldblquote root\rdblquote );\f0\par
+\b 7. What is the difference between React.development.js and React.production.js files via CDN? \par
+\lang9 React.development.js:\par
+\b0 Think of this like having training wheels on a bicycle. It's designed to help developers during the development and debugging phase.\par
+It's larger because it includes extra information and checks that are helpful for finding and fixing issues quickly.\par
+If something goes wrong, it provides clear and detailed error messages, making it easier to spot problems.\par
+\b React.production.js:\par
+\b0 Now, think of this as the same bicycle without training wheels. It's the version you use when you're confident and ready to ride smoothly.\par
+It's smaller because it doesn't carry the extra development tools and messages, making it faster to download and run in a real user's browser.\par
+If something goes wrong in this version, the error messages might be more concise, aimed at not slowing down the user's experience.\par
+\b 8. What is async and defer? \par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-180\li180\sa200\sl276\slmult1\b0 Async and Defer are boolean attributes that are used with our script tag to load the scripts efficiently into our browser.\par
+
+\pard\sa200\sl276\slmult1\f1\bullet  When we load a webpage, there are two main things that are happening in the browser. One is HTML parsing and the other is loading of the script.\par
+\bullet  The loading of the script contains two things:\par
+- Fetching the script from the network\par
+- Executing the script\par
+\ul\b async Attribute:\par
+\ulnone <script src="\f0\lang1033 index\f1\lang9 .js" async></script>\b0\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-270\li270\sa200\sl276\slmult1 When you add the async attribute to a <script> tag, it tells the browser to load the\f0\lang1033  \f1\lang9 script\f0\lang1033  \f1\lang9 asynchronously while parsing the HTML document.\par
+{\pntext\f2\'B7\tab}The browser will continue parsing the HTML and execute the script as soon as it finishes\f0\lang1033  \f1\lang9 downloading, without waiting for the HTML parsing to complete.\par
+{\pntext\f2\'B7\tab}This can lead to out-of-order script execution, which may not be suitable for scripts that depend on specific page elements or other scripts.\par
+{\pntext\f2\'B7\tab}It's commonly used for non-blocking scripts, like analytics or advertisements, that don't rely on the page's structure.\par
+
+\pard\sa200\sl276\slmult1\ul\b defer Attribute:\ulnone\par
+<script src="\f0\lang1033 index\f1\lang9 .js" defer></script>\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-180\li180\sa200\sl276\slmult1\b0 Adding the defer attribute to a <script> tag also tells the browser to load the script asynchronously.\par
+{\pntext\f2\'B7\tab}However, the key difference is that scripts with the defer attribute will only execute after the HTML parsing is complete.\par
+{\pntext\f2\'B7\tab}This ensures that the scripts are executed in the order they appear in the HTML document and that they have access to the fully parsed DOM.\par
+{\pntext\f2\'B7\tab}It's useful for scripts that need to interact with or manipulate the page's structure.\par
+}
+ 

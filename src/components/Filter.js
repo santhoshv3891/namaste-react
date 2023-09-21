@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import Card, { promoted } from "./Card";
 import Shimmer from "./Shimmer";
 import Card from "./Card";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/userContext";
 
 const Filter = () => {
   const [resList, setResObj] = useState([]);
@@ -21,6 +23,7 @@ const Filter = () => {
     );
 
     const json = await data.json();
+    console.log(json?.data);
     setResObj(
       json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -29,15 +32,20 @@ const Filter = () => {
     );
   };
 
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
+  const WithPromoted = promoted(Card);
+
   if (onlineStatus === false)
     return <h1>You're offline! Please check your internet connection!</h1>;
   return resList.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body-container">
-      <div className="filter-searchContainer">
-        <div className="search-container">
+      <div className="filter-searchContainer flex mx-2 my-6">
+        <div className="search-container mx-2">
           <input
+            className="border-black border mr-2 pl-1 rounded-md"
             type="text"
             onChange={(e) => {
               getSrchText(e.target.value);
@@ -45,7 +53,7 @@ const Filter = () => {
             value={srchText}
           />
           <button
-            className="search-button"
+            className="bg-green-200 px-2 py-1"
             onClick={() => {
               const searchList = resList.filter((res) => {
                 const arrText = res.info.name.toLowerCase();
@@ -61,7 +69,7 @@ const Filter = () => {
         </div>
         <div className="filter-container">
           <button
-            className="filter-btn"
+            className="bg-green-200 px-2 py-1"
             onClick={() => {
               const filteredList = filteredListAll.filter(
                 (res) => res.info.avgRating > 4.3
@@ -72,11 +80,25 @@ const Filter = () => {
             Filter
           </button>
         </div>
+        <div>
+          <input
+            className="border-black border mx-2 pl-1 rounded-md"
+            type="text"
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+            value={loggedInUser}
+          />
+        </div>
       </div>
-      <div className="card-container">
+      <div className="card-container flex flex-wrap mx-4">
         {filteredListAll.map((res) => (
           <Link key={res.info.id} to={"/restaurants/" + res.info.id}>
-            <Card key={res.info.id} restaurant={res} />
+            {res.info.promoted ? (
+              <WithPromoted resList={res} />
+            ) : (
+              <Card key={res.info.id} restaurant={res} />
+            )}
           </Link>
         ))}
       </div>
